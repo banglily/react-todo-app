@@ -8,7 +8,7 @@ function Todos ({ todos, toggleCompleted, deleteTodo }) {
           completed={todo.completed}
           title={todo.title}
           key={todo.id}
-          todo={todo.id}
+          id={todo.id}
           toggleCompleted={toggleCompleted}
           deleteTodo={deleteTodo}
         />
@@ -25,4 +25,4 @@ const styles = {
   },
 }
 
-export default Todos
+export default Todos;

@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import Todos from './components/Todos';
+import { useState } from "react";
+import Todos from "./components/Todos";
+import TodoForm from "./components/TodoForm";
 
 const DUMMY = [
   {
@@ -42,12 +43,32 @@ function App() {
     setTodos(filterDeleted);
   };
 
+  const addTodo = (todoTitle) => {
+    if (todoTitle === '') {
+      return
+    }
+
+    const newTodo = {
+      id: todos.length + 1,
+      title: todoTitle,
+      completed: false,
+    }
+
+    const updatedTodos = todos.concat(newTodo)
+    setTodos(updatedTodos)
+  };
+
   return (
     <div style={styles.container}>
       <h1>My Todo List</h1>
-      <Todos todos={todos} toggleCompleted={toggleCompleted} />
+      <TodoForm addTodo={addTodo} />
+      <Todos
+        todos={todos}
+        toggleCompleted={toggleCompleted}
+        deleteTodo={deleteTodo}
+      />
     </div>
-  )
+  );
 }
 
 const styles = {
@@ -55,9 +76,6 @@ const styles = {
     textAlign: 'center',
     padding: '12px',
   },
-  title: {
-    fontsize: '36px',
-  },
-}
+};
 
-export default App
+export default App;
