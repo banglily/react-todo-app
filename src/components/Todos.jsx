@@ -1,6 +1,6 @@
 import TodoItem from "./TodoItem";
 
-function Todos ({ todos, toggleCompleted, deleteTodo }) {
+function Todos({ todos, toggleCompleted, deleteTodo }) {
   return (
     <div style={styles.container}>
       {todos.map((todo) => (
@@ -8,11 +8,10 @@ function Todos ({ todos, toggleCompleted, deleteTodo }) {
           completed={todo.completed}
           title={todo.title}
           key={todo.id}
-          todo={todo.id}
+          todo={todo.Id}
           toggleCompleted={toggleCompleted}
           deleteTodo={deleteTodo}
         />
-        
       ))}
     </div>
   );
@@ -23,6 +22,6 @@ const styles = {
     width: '40%',
     margin: '0 auto',
   },
-}
+};
 
-export default Todos
+export default Todos;

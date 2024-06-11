@@ -1,6 +1,6 @@
 import React from "react";
 
-function TodoItem(todo) {
+function TodoItem (todo) {
     const getTodoTitleStyle = () => {
         if (todo.completed === true) {
             return { textDecoration: "line-through" };
@@ -26,28 +26,28 @@ function TodoItem(todo) {
 
 const style = {
     todoItem: {
-      border: "2px solid #f4f4f4",
-      fontSize: "24px",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "0 14px",
-    },
-    checkbox: {
-      marginRight: "10px",
-      height: "18px",
-      width: "18px",
-    },
-    button: {
-      backgroundColor: "#BB0000",
-      color: "#fff",
-      height: "30px",
-      width: "30px",
-      borderRadius: "100%",
-      border: "none",
-      cursor: "pointer",
-      fontSize: "16px",
-    },
-  };
+        border: "2px solid #f4f4f4",
+        fontSize: "24px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "0 14px",
+      },
+      checkbox: {
+        marginRight: "10px",
+        height: "18px",
+        width: "18px",
+      },
+      button: {
+        backgroundColor: "#BB0000",
+        color: "#fff",
+        height: "30px",
+        width: "30px",
+        borderRadius: "100%",
+        border: "none",
+        cursor: "pointer",
+        fontSize: "16px",
+      },
+}
 
-export default TodoItem
+export default TodoItem;
